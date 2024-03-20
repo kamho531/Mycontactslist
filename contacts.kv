@@ -1,4 +1,4 @@
-#:kivy 1.0
+#:kivy 2.0
 
 ScreenManager:
     MainScreen:
@@ -40,7 +40,7 @@ ScreenManager:
         MDTextField:
             id: name_txt
             hint_text: "Enter name here"
-            mode: "rectangle"
+            mode: "fill"
             pos_hint: {"x": 0.01, "y": 0.9}
             
         MDTextField:
@@ -48,7 +48,7 @@ ScreenManager:
             hint_text: "Enter phone number here"
             helper_text: "In format of XXX-XXX-XXXX"
             helper_text_mode: "on_focus"
-            mode: "rectangle"
+            mode: "fill"
             pos_hint: {"x": 0.01, "y": 0.8}
                  
         MDTextField:
@@ -56,7 +56,8 @@ ScreenManager:
             hint_text: "Enter email here"
             helper_text: "Must have a @"
             helper_text_mode: "on_focus"
-            mode: "rectangle"
+            mode: "fill"
+            validator: "email"
             pos_hint: {"x": 0.01, "y": 0.7}            
 
         MDBottomAppBar:    
@@ -104,6 +105,7 @@ ScreenManager:
             hint_text: "Edit email here"
             helper_text: "Must have a @"
             helper_text_mode: "on_focus"
+            validator: "email"
             pos_hint: {"x": 0.01, "y": 0.7}            
         
         MDFlatButton:
